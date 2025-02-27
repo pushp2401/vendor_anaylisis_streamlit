@@ -139,7 +139,6 @@ if uploaded_files:
     for uploaded_file in uploaded_files:
 
         # st.subheader(f"Processing: {uploaded_file.name}") 
-        import pdb; pdb.set_trace()
         if uploaded_file.name == "2_financials.pdf" :
             st.subheader(f"Processing: {uploaded_file.name}")
 
