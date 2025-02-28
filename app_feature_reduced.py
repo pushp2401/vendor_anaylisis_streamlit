@@ -37,6 +37,7 @@ if uploaded_files:
                 # import pdb; pdb.set_trace()
                 extracted_text = extract_text_from_pdf(uploaded_file)
                 print(extracted_text)
+                print("++++++++++++++++++++++++")
                 # metrics_dict = json.loads(query_gpt_selected_feature(extracted_text)) 
                 try :
                     metrics_dict = json.loads(query_gpt_xgb(extracted_text)) 
