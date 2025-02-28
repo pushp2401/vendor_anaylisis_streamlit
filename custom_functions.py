@@ -206,7 +206,7 @@ If any details is not available keep the value as "NA" for them .
 "Project starting date" : "yyyy-mm-dd",
 "Project ending date" : "yyyy-mm-dd",
 "Steel quantity to be used in Metric Ton" : int,
-"Cement quantity to be used in MTetric Ton" : int,
+"Cement/Concrete quantity to be used in MTetric Ton" : int,
 "Project size (cost based)" : str,
 "Project size(duration based) : str"
 """
