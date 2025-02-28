@@ -36,10 +36,13 @@ if uploaded_files:
                 # st.subheader(f"Processing: {uploaded_file.name}")
                 # import pdb; pdb.set_trace()
                 extracted_text = extract_text_from_pdf(uploaded_file)
+                print(extracted_text)
                 # metrics_dict = json.loads(query_gpt_selected_feature(extracted_text)) 
                 try :
                     metrics_dict = json.loads(query_gpt_xgb(extracted_text)) 
+                    print(metrics_dict)
                     bankruptcy_status = predict_bankruptcy_selected_feature(metrics_dict)
+                    print(bankruptcy_status)
                     if bankruptcy_status[0] == 1 : 
                         status = "Not bankrupt yet" 
                         st.text_area("Bankruptcy status prediction" ,value = f"Predicted bankruptcy status of company:{status}" , key = "bsp0")
@@ -47,7 +50,7 @@ if uploaded_files:
                         status = "About to be bankrupt"
                         st.text_area("Bankruptcy status prediction" ,value = f"Predicted bankruptcy status of company:{status}", key = "bsp1")
                 except Exception as e:
-                    print(e)
+                    print("error :" , e)
                     status = "Could not be determined due to incomplete information"
                     st.text_area("Bankruptcy status prediction" ,value = f"Incomplete financial details to rpedict bankruptcy", key = "bsp1")
 
