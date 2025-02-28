@@ -46,14 +46,32 @@ if uploaded_files:
                     print(bankruptcy_status)
                     if bankruptcy_status[0] == 1 : 
                         status = "Not bankrupt yet" 
-                        st.text_area("Bankruptcy status prediction" ,value = f"Predicted bankruptcy status of company:{status}" , key = "bsp0")
+                        st.text_area("Bankruptcy status prediction" ,value = f"{status}" , key = "bsp0")
                     if bankruptcy_status[0] == 0 : 
                         status = "About to be bankrupt"
-                        st.text_area("Bankruptcy status prediction" ,value = f"Predicted bankruptcy status of company:{status}", key = "bsp1")
+                        st.text_area("Bankruptcy status prediction" ,value = f"{status}", key = "bsp1")
                 except Exception as e:
                     print("error :" , e)
                     status = "Could not be determined due to incomplete information"
-                    st.text_area("Bankruptcy status prediction" ,value = f"Incomplete financial details to rpedict bankruptcy", key = "bsp1")
+                    st.text_area("Bankruptcy status prediction" ,value = f"""Incomplete financial details to predict bankruptcy. Reuired metrices - 
+                    "current assests" : float ,
+                    "cost of good sold" : float , 
+                    "Depreciation and amortization" : float ,
+                    "EBITDA" : float ,
+                    "Inventory" : float,
+                    "Net Income" : float ,
+                    "Total Receivables" : float , 
+                    "Market value" : float , 
+                    "Net sales" : float , 
+                    "Total assests" : float , 
+                    "Total Long-term debt " : float ,
+                    "EBIT" : float , 
+                    "Gross Profit" : float , 
+                    "Total Current Liabilities" : float , 
+                    "Retained Earnings" : float , 
+                    "Total Revenue" : float , 
+                    "Total Liabilities " : float , 
+                    "Total Operating Expenses" : float""", key = "bsp1")
 
         if "tender" in uploaded_file.name  :
             st.subheader(f"Processing: {uploaded_file.name}")
