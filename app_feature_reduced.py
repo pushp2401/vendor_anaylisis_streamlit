@@ -85,6 +85,7 @@ if uploaded_files:
         # import pdb; pdb.set_trace()
         tender_details_dict = json.loads(tender_details) 
         if tender_details_dict["Project starting date"] != "NA" :
+            actual_date = tender_details_dict["Project starting date"]
             date1 = tender_details_dict["Project starting date"]
         else :
             date1="2024-08-29"
@@ -97,7 +98,7 @@ if uploaded_files:
             low1=227.5,
             df= training_data
         )
-    st.text_area("Aluminium Price prediction basde on tender" , value = f"\n📅 Predicted Price on {date1}: {predicted_price}\n" , key = "alpp") 
+    # st.text_area("Aluminium Price prediction basde on tender" , value = f"\n📅 Predicted Price on {actual_date}: {predicted_price}\n" , key = "alpp") 
     # import pdb; pdb.set_trace()
     with st.spinner("Fecthing last 7 day news" , show_time = True) : 
         news_df_7 = news_fetcher(company_name , '7d')
