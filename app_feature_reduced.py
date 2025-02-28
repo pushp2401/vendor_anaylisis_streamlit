@@ -71,7 +71,7 @@ if uploaded_files:
                     "Retained Earnings" : float , 
                     "Total Revenue" : float , 
                     "Total Liabilities " : float , 
-                    "Total Operating Expenses" : float""", key = "bsp1")
+                    "Total Operating Expenses" : float""", height = 300 , key = "bsp1")
 
         if "tender" in uploaded_file.name  :
             st.subheader(f"Processing: {uploaded_file.name}")
