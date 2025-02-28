@@ -46,7 +46,8 @@ if uploaded_files:
                     if bankruptcy_status[0] == 0 : 
                         status = "About to be bankrupt"
                         st.text_area("Bankruptcy status prediction" ,value = f"Predicted bankruptcy status of company:{status}", key = "bsp1")
-                except :
+                except Exception as e:
+                    print(e)
                     status = "Could not be determined due to incomplete information"
                     st.text_area("Bankruptcy status prediction" ,value = f"Incomplete financial details to rpedict bankruptcy", key = "bsp1")
 
