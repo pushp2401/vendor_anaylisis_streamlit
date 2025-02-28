@@ -183,7 +183,8 @@ The margin percentage should be chosen based on industry norms and company-speci
 
 ### Task 1: Project Eligibility Assessment
 Assess whether the company should be awarded the upcoming project based on:
-- Financial health
+- Financial health based on Financial Metrices and Bankruptcy status.
+- Unavailability of bankrutcy status must be treated as warning sign for elegibility assessment.
 - Sentiment analysis
 - News impact
 - Ability to cover project costs
