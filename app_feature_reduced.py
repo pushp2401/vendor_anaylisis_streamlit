@@ -217,8 +217,8 @@ Highlight any significant news that could influence the decision to award the pr
 
     def tender_details_gpt(main_prompt) : 
         resp = client.chat.completions.create(
-            # model = "gpt-4o-mini",
-            model = "gpt-4.5-preview",
+            model = "gpt-4o-mini",
+            # model = "gpt-4.5-preview",
             temperature= 0,
             messages=[
                 {
