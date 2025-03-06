@@ -21,7 +21,7 @@ client = OpenAI(api_key= os.getenv('OPENAI_API_KEY'))
 
 st.title("Construction Vendor Bankruptcy Analysis")
 
-uploaded_files = st.file_uploader('''Upload 2 pdf files simultaneously - \n 1.company_finanicials.pdf : Document containing financial report of company \n 2.tender_details.pdf : pdf document contaning tender details''', type=["pdf"], accept_multiple_files=True)
+uploaded_files = st.file_uploader('''Upload 2 pdf files simultaneously - \n 1. company_finanicials.pdf : Document containing financial report of company \n 2. tender_details.pdf : pdf document contaning tender details''', type=["pdf"], accept_multiple_files=True)
 if uploaded_files:
     for uploaded_file in uploaded_files:
 
