@@ -27,7 +27,7 @@ st.markdown("""
 2. **tender_details.pdf**: PDF document containing tender details.  
    - The filename **must** include `_tender` in it (e.g., `XYZ_tender.pdf`).  
 """)
-uploaded_files = st.file_uploader( type=["pdf"], accept_multiple_files=True)
+uploaded_files = st.file_uploader( " " ,type=["pdf"], accept_multiple_files=True)
 if uploaded_files:
     for uploaded_file in uploaded_files:
 
